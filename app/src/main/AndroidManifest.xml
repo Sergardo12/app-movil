@@ -13,6 +13,12 @@
         android:theme="@style/Theme.My_App_Project"
         tools:targetApi="31">
         <activity
+            android:name=".FormRegisTrabajador"
+            android:exported="false" />
+        <activity
+            android:name=".FormRegisCliente"
+            android:exported="false" />
+        <activity
             android:name=".FormInicioSesion"
             android:exported="false" />
         <activity
