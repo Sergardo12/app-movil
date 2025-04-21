@@ -1,7 +1,9 @@
 package com.example.my_app_project
 
+import android.content.Intent
 import android.os.Bundle
 import android.text.method.PasswordTransformationMethod
+import android.widget.Button
 import android.widget.EditText
 import android.widget.ImageButton
 import androidx.activity.enableEdgeToEdge
@@ -33,6 +35,13 @@ class FormRegisTrabajador : AppCompatActivity() {
                 btnMostrarContraseña.setBackgroundResource(R.drawable.ojocerrado)
             }
             contraseña.setSelection(contraseña.text.length)
+        }
+
+        //Boton Siguiente
+        val btnSiguiente = findViewById<Button>(R.id.btnSiguiente)
+        btnSiguiente.setOnClickListener{
+            val intento = Intent(this,FormRegisTrabajadorPart2::class.java)
+            startActivity(intento)
         }
     }
 }
