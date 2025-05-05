@@ -1,4 +1,4 @@
-package com.example.my_app_project
+package com.example.my_app_project.ui.activity.Register
 
 import android.os.Bundle
 import android.text.method.PasswordTransformationMethod
@@ -8,31 +8,32 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.example.my_app_project.R
 
-class FormRegisCliente : AppCompatActivity() {
+class FormInicioSesion : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        setContentView(R.layout.activity_form_regis_cliente)
+        setContentView(R.layout.activity_form_inicio_sesion)
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-        val contraseña =findViewById<EditText>(R.id.contraseña)
+        val password =findViewById<EditText>(R.id.password)
         val btnMostrarContraseña = findViewById<ImageButton>(R.id.btnMostrarContraseña)
         var ContraseñaVisible = false
 
         btnMostrarContraseña.setOnClickListener{
             ContraseñaVisible = !ContraseñaVisible
             if (ContraseñaVisible) {
-                contraseña.transformationMethod = null
+                password.transformationMethod = null
                 btnMostrarContraseña.setBackgroundResource(R.drawable.ojoabierto)
             }else{
-                contraseña.transformationMethod = PasswordTransformationMethod.getInstance()
+                password.transformationMethod = PasswordTransformationMethod.getInstance()
                 btnMostrarContraseña.setBackgroundResource(R.drawable.ojocerrado)
             }
-            contraseña.setSelection(contraseña.text.length)
+            password.setSelection(password.text.length)
         }
     }
 }

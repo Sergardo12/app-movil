@@ -1,4 +1,4 @@
-package com.example.my_app_project
+package com.example.my_app_project.ui.activity.Register
 
 import android.content.Intent
 import android.os.Bundle
@@ -10,6 +10,7 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.example.my_app_project.R
 
 class FormRegisTrabajador : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -40,7 +41,7 @@ class FormRegisTrabajador : AppCompatActivity() {
         //Boton Siguiente
         val btnSiguiente = findViewById<Button>(R.id.btnSiguiente)
         btnSiguiente.setOnClickListener{
-            val intento = Intent(this,FormRegisTrabajadorPart2::class.java)
+            val intento = Intent(this, FormRegisTrabajadorPart2::class.java)
             startActivity(intento)
         }
     }

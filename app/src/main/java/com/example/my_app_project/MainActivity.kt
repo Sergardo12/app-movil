@@ -7,6 +7,8 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.example.my_app_project.ui.activity.Register.FormInicioSesion
+import com.example.my_app_project.ui.activity.Register.FormRegistro
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -28,7 +30,7 @@ class MainActivity : AppCompatActivity() {
         //Boton Iniciar Sesion
         val btnIniciarSesion = findViewById<Button>(R.id.btnIniciarSesion)
         btnIniciarSesion.setOnClickListener{
-            val intent = Intent(this,FormInicioSesion::class.java)
+            val intent = Intent(this, FormInicioSesion::class.java)
             startActivity(intent)
         }
     }

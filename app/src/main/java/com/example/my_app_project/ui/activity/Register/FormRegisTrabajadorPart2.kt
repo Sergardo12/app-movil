@@ -1,10 +1,11 @@
-package com.example.my_app_project
+package com.example.my_app_project.ui.activity.Register
 
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.example.my_app_project.R
 
 class FormRegisTrabajadorPart2 : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
