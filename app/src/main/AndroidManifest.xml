@@ -13,7 +13,9 @@
         android:theme="@style/Theme.My_App_Project"
         tools:targetApi="31">
         <activity
-
+            android:name=".ui.activity.Home.HomeActivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.activity.Register.FormRegisTrabajadorPart2"
             android:exported="false" />
         <activity
@@ -27,7 +29,6 @@
             android:exported="false" />
         <activity
             android:name=".ui.activity.Register.FormRegistro"
-
             android:exported="false" />
         <activity
             android:name=".MainActivity"
