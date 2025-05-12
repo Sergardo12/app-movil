@@ -17,7 +17,7 @@ class PerfilActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_perfilpublicotrab)
 
         val btnMensaje: Button = findViewById(R.id.btnMensaje)
         val btnLlamar: Button = findViewById(R.id.btnLlamar)
