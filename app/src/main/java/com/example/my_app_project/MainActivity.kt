@@ -7,12 +7,15 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.example.my_app_project.ui.activity.Principal.PrincipalActivity
 import com.example.my_app_project.ui.activity.Register.FormInicioSesion
 import com.example.my_app_project.ui.activity.Register.FormRegistro
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+
         enableEdgeToEdge()
         setContentView(R.layout.activity_main)
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
@@ -33,5 +36,12 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, FormInicioSesion::class.java)
             startActivity(intent)
         }
+
+
+
+//        startActivity(Intent(this, PrincipalActivity::class.java))
+//        finish()
+
+
     }
 }
