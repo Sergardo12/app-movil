@@ -1,6 +1,15 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
+    kotlin("kapt")
+    alias(libs.plugins.google.services)
+    alias(libs.plugins.hilt)
+
+
+
+
+
+
 }
 
 android {
@@ -33,6 +42,9 @@ android {
     kotlinOptions {
         jvmTarget = "11"
     }
+    buildFeatures{
+        viewBinding = true
+    }
 }
 
 dependencies {
@@ -43,6 +55,18 @@ dependencies {
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
     testImplementation(libs.junit)
+
+    kapt(libs.glide.compiler)
+    kapt(libs.hilt.compiler)
+    implementation(libs.glide) // libreria glide
+    implementation(libs.hilt.core) // libreria de hilt
+
+
+    implementation(libs.androidx.fragment.ktx)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+
+    implementation(platform("com.google.firebase:firebase-bom:33.13.0")) // Firebase BoM (controla versiones automáticamente)
+    implementation("com.google.firebase:firebase-analytics")// Para medir el uso y comportamiento de los usuarios en tu app.
+    implementation("com.google.firebase:firebase-firestore")
 }
