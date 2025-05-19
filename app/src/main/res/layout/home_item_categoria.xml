@@ -3,7 +3,7 @@
     android:layout_width="100dp"
     android:layout_height="100dp">
         <ImageButton
-            android:id="@+id/image_service"
+            android:id="@+id/image_categoria"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:scaleType="centerCrop"
@@ -11,10 +11,10 @@
             android:contentDescription="Service Image" />
 
         <TextView
-            android:id="@+id/text_service"
+            android:id="@+id/text_categoria"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="Servicio"
+            android:text="Categoria"
             android:textColor="@android:color/white"
             android:textSize="16sp"
             android:textStyle="bold"

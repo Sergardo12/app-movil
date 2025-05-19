@@ -72,4 +72,8 @@ dependencies {
     implementation(platform("com.google.firebase:firebase-bom:33.13.0")) // Firebase BoM (controla versiones automáticamente)
     implementation("com.google.firebase:firebase-analytics")// Para medir el uso y comportamiento de los usuarios en tu app.
     implementation("com.google.firebase:firebase-firestore")
+
+    implementation("com.google.firebase:firebase-auth")
+    implementation("com.google.android.gms:play-services-auth:21.0.0")
+
 }
