@@ -19,6 +19,7 @@ import kotlinx.coroutines.launch
 class CategoryFragment : Fragment() {
     private var _binding: FragmentHomeCategoryServicesBinding? = null
     private val binding get() = _binding!!
+
     private val viewModel: CategoriaViewModel by viewModels()
     private lateinit var categoriasAdapter: CategoriasAdapter
 
