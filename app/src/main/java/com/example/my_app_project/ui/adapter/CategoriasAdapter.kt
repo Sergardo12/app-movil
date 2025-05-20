@@ -13,6 +13,7 @@ import com.bumptech.glide.Glide
 import com.example.my_app_project.R
 import com.example.my_app_project.domain.model.Categoria
 
+
 class CategoriasAdapter : ListAdapter<Categoria, CategoriasAdapter.CategoriaViewHolder>(DiffCallback()) {
 
 
@@ -30,14 +31,14 @@ class CategoriasAdapter : ListAdapter<Categoria, CategoriasAdapter.CategoriaView
         private val texto: TextView = itemView.findViewById(R.id.text_categoria)
 
         fun bind(categoria: Categoria) {
-            texto.text = categoria.nombreServicio
-            Glide.with(itemView.context).load(categoria.imagenServicio).into(imagen)
+            texto.text = categoria.nombreCategoria
+            Glide.with(itemView.context).load(categoria.imagenCategoria).into(imagen)
         }
     }
 
     class DiffCallback : DiffUtil.ItemCallback<Categoria>() {
         override fun areItemsTheSame(oldItem: Categoria, newItem: Categoria): Boolean {
-            return oldItem.nombreServicio == newItem.nombreServicio
+            return oldItem.nombreCategoria == newItem.nombreCategoria
         }
 
         override fun areContentsTheSame(oldItem: Categoria, newItem: Categoria): Boolean {
@@ -45,3 +46,6 @@ class CategoriasAdapter : ListAdapter<Categoria, CategoriasAdapter.CategoriaView
         }
     }
 }
+
+
+
