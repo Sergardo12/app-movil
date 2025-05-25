@@ -4,6 +4,7 @@ import android.content.res.Resources
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
+import android.widget.Button
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -28,11 +29,16 @@ class HomeActivity : AppCompatActivity() {
         setContentView(R.layout.activity_home)
 
         val drawer = findViewById<NavigationView>(R.id.navigation_view)
+        val headerView = drawer.getHeaderView(0)
         val displayMetrics = Resources.getSystem().displayMetrics
         val screenWidth = displayMetrics.widthPixels
         val drawerWidth = (screenWidth * 0.7).toInt()
         drawer.layoutParams.width = drawerWidth
         drawer.requestLayout()
+
+        val btnDatosPersonales = headerView.findViewById<Button>(R.id.btn_datos_personales)
+        val btnDatosCuenta = headerView.findViewById<Button>(R.id.btn_datos_cuenta)
+
 
         val toolbar = findViewById<MaterialToolbar>(R.id.toolbar)
         setSupportActionBar(toolbar)
